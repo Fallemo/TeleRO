@@ -30,8 +30,11 @@ TeleRO does not host, store or redistribute any video. It shows public channel l
 
 Because it contacts many channel websites, an antivirus (for example Bitdefender) may block some of them. That does not mean your computer is infected; the blocked channel just will not play.
 
+The executable is not code-signed, it runs a small local server and it finds its own Edge windows to remember their position, so a heuristic antivirus may also flag `TeleRO.exe` itself (this has been seen with Bitdefender's behavioral detection). If that happens, restore the file from quarantine or add an exception, and, if you like, report it to the vendor as a false positive. TeleRO only connects to the public channel lists (iptv-org), to the channel sources you play, to a script CDN (jsDelivr) for the players, and to your own computer.
+
 ## Version history
 
+- **1.9.1** The Boom TV channel was removed: its domain is blocked as dangerous by some antivirus software. The app no longer contacts radioboom.ro or tvboom.ro, and the channel is also removed from Favorites and Recent.
 - **1.9** Volume (and mute) is shared between the main and the small window and is remembered between runs.
 - **1.8** The window reopens where it was closed, including maximized; the small window has its own position. If the saved screen is gone it falls back to the primary monitor. The About window scrolls.
 - **1.7** The app exits about 20 seconds after the last window is closed instead of staying in the background.
