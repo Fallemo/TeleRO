@@ -21,6 +21,7 @@ Get the latest `TeleRO-vX.Y.zip` from the [Releases](../../releases/latest) page
 - **Favorites** tab that collects your favorites from every region, and a **Recent** tab with the last 15 channels.
 - **Small window** (button or `P`): the picture in a regular window that snaps to screen edges and does not stay on top of other windows.
 - Keyboard: `Up`/`Down` change channel, `M` mute, `F` or double-click full screen, `Space` pause.
+- **Recording** (button or `R`): saves the current channel to an `.mkv` file with `ffmpeg`, without re-encoding. You choose the folder; ffmpeg is not included (the app finds it next to `TeleRO.exe`, in PATH or in the usual places).
 - Remembers your window position and size, volume and last channel.
 - Optional check that hides channels that no longer work.
 
@@ -30,10 +31,11 @@ TeleRO does not host, store or redistribute any video. It shows public channel l
 
 Because it contacts many channel websites, an antivirus (for example Bitdefender) may block some of them. That does not mean your computer is infected; the blocked channel just will not play.
 
-The executable is not code-signed, it runs a small local server and it finds its own Edge windows to remember their position, so a heuristic antivirus may also flag `TeleRO.exe` itself (this has been seen with Bitdefender's behavioral detection). If that happens, restore the file from quarantine or add an exception, and, if you like, report it to the vendor as a false positive. TeleRO only connects to the public channel lists (iptv-org), to the channel sources you play, to a script CDN (jsDelivr) for the players, and to your own computer.
+The executable is not code-signed, it runs a small local server and it finds its own Edge windows to remember their position, so a heuristic antivirus may also flag `TeleRO.exe` itself (this has been seen with Bitdefender's behavioral detection). If that happens, restore the file from quarantine or add an exception, and, if you like, report it to the vendor as a false positive. TeleRO only connects to the public channel lists (iptv-org), to the channel sources you play, to a script CDN (jsDelivr) for the players, and to your own computer. The recording feature starts `ffmpeg` (if you have it) only when you press the record button; record for personal use only and respect copyright.
 
 ## Version history
 
+- **1.10** Recording to `.mkv` through ffmpeg (button or `R`), with a folder setting and an optional automatic stop.
 - **1.9.1** The Boom TV channel was removed: its domain is blocked as dangerous by some antivirus software. The app no longer contacts radioboom.ro or tvboom.ro, and the channel is also removed from Favorites and Recent.
 - **1.9** Volume (and mute) is shared between the main and the small window and is remembered between runs.
 - **1.8** The window reopens where it was closed, including maximized; the small window has its own position. If the saved screen is gone it falls back to the primary monitor. The About window scrolls.
