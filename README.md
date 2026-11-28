@@ -8,7 +8,7 @@ Watch free TV channels from Romania, Europe and the Americas on Windows, in one 
 
 ## Download
 
-Get the latest `TeleRO-vX.Y.zip` from the [Releases](../../releases/latest) page, unzip it anywhere and double-click `TeleRO.exe`.
+Get the latest `TeleRO-vX.Y.zip` from the [Releases](../../releases/latest) page, unzip it anywhere and double-click `TeleRO.exe`. From 1.11 on, the app tells you when a new version is available and can update itself; older versions must be replaced by hand once.
 
 **Requirements:** Windows 10 or 11 with Microsoft Edge (already included in Windows) and an internet connection. [VLC](https://www.videolan.org) is optional and only used as a fallback for channels that cannot play inside the window.
 
@@ -24,6 +24,7 @@ Get the latest `TeleRO-vX.Y.zip` from the [Releases](../../releases/latest) page
 - **Recording** (button or `R`): saves the current channel to an `.mkv` file with `ffmpeg`, without re-encoding. You choose the folder; ffmpeg is not included (the app finds it next to `TeleRO.exe`, in PATH or in the usual places).
 - Remembers your window position and size, volume and last channel.
 - Optional check that hides channels that no longer work.
+- **Updates from inside the app**: when a new release appears here, a banner offers to install it (downloads `TeleRO.exe`, verifies its SHA-256, replaces the old file and restarts). Nothing is installed without your click, and the automatic check can be turned off.
 
 ## About the content
 
@@ -31,10 +32,11 @@ TeleRO does not host, store or redistribute any video. It shows public channel l
 
 Because it contacts many channel websites, an antivirus (for example Bitdefender) may block some of them. That does not mean your computer is infected; the blocked channel just will not play.
 
-The executable is not code-signed, it runs a small local server and it finds its own Edge windows to remember their position, so a heuristic antivirus may also flag `TeleRO.exe` itself (this has been seen with Bitdefender's behavioral detection). If that happens, restore the file from quarantine or add an exception, and, if you like, report it to the vendor as a false positive. TeleRO only connects to the public channel lists (iptv-org), to the channel sources you play, to a script CDN (jsDelivr) for the players, and to your own computer. The recording feature starts `ffmpeg` (if you have it) only when you press the record button; record for personal use only and respect copyright.
+The executable is not code-signed, it runs a small local server and it finds its own Edge windows to remember their position, so a heuristic antivirus may also flag `TeleRO.exe` itself (this has been seen with Bitdefender's behavioral detection). If that happens, restore the file from quarantine or add an exception, and, if you like, report it to the vendor as a false positive. TeleRO only connects to the public channel lists (iptv-org), to the channel sources you play, to a script CDN (jsDelivr) for the players, to GitHub (api.github.com and the release downloads) to look for updates, and to your own computer. The recording feature starts `ffmpeg` (if you have it) only when you press the record button; record for personal use only and respect copyright.
 
 ## Version history
 
+- **1.11** Update from inside the app (banner, SHA-256 check, replaces the exe and restarts; only on your click). The Edge "Translate page" bubble no longer appears.
 - **1.10** Recording to `.mkv` through ffmpeg (button or `R`), with a folder setting and an optional automatic stop.
 - **1.9.1** The Boom TV channel was removed: its domain is blocked as dangerous by some antivirus software. The app no longer contacts radioboom.ro or tvboom.ro, and the channel is also removed from Favorites and Recent.
 - **1.9** Volume (and mute) is shared between the main and the small window and is remembered between runs.
